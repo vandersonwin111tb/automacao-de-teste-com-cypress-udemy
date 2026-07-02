@@ -8,9 +8,10 @@ module.exports = defineConfig({
       viewportWidthBreakpoint: 768,
     },
     // defaultCommandTimeout: 8000,      // <-- CORRETO: Define o tempo de timeout (ex: 4000ms)
-    // setupNodeEvents(on, config) {
-    //   // implemente os node event listeners aqui, se necessário
-    // },
+    setupNodeEvents(on, config) {
+      require('@cypress/grep/src/plugin')(config)
+      return config
+    },
   },
   projectId: '3zx52z'
 })

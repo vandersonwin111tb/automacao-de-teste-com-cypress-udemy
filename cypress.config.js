@@ -4,6 +4,10 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   e2e: {
     baseUrl: 'https://notes-serverless-app.com/', // URL da aplicação do curso
+    retries: {
+      runMode: 2, // Tenta rodar até 2 vezes no GitHub Actions se falhar por instabilidade
+      openMode: 0
+    },
     env: {
       viewportWidthBreakpoint: 768,
     },

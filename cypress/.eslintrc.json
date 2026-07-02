@@ -1,3 +1,5 @@
+// ESLint configuration for Cypress tests
+
 {
   "env": {
     "browser": true,
